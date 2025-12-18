@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Station - Lua</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Syntax Station</h1>
+        <p>Lua Fundamentals</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <label for="language-select">Switch language:</label>
+            <select id="language-select" onchange="if (this.value) window.location.href = this.value;">
+                <option value="">-- Select --</option>
+                <option value="../index.html">Home</option>
+                <option value="java.html">Java</option>
+                <option value="lua.html" selected>Lua</option>
+            </select>
+        </section>
+
+        <div class="snippet-container">
+            <h2>Hello World</h2>
+            <pre><code>print("Hello, World!")</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Variables</h2>
+            <pre><code>local myNum = 5              -- Number
+local myString = "Hello"     -- String
+local myBool = true          -- Boolean
+local myTable = {1, 2, 3}    -- Table</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>If-Else</h2>
+            <pre><code>local time = 20
+if time < 18 then
+    print("Good day.")
+else
+    print("Good evening.")
+end</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Loops</h2>
+            <pre><code>for i = 1, 5 do
+    print(i)
+end</code></pre>
+        </div>
+
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Syntax Station</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Station - Java</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Syntax Station</h1>
+        <p>Java Fundamentals</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <label for="language-select">Switch language:</label>
+            <select id="language-select" onchange="if (this.value) window.location.href = this.value;">
+                <option value="">-- Select --</option>
+                <option value="../index.html">Home</option>
+                <option value="java.html" selected>Java</option>
+                <option value="lua.html">Lua</option>
+            </select>
+        </section>
+
+        <div class="snippet-container">
+            <h2>Hello World</h2>
+            <pre><code>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Variables</h2>
+            <pre><code>int myNum = 5;               // Integer
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>If-Else</h2>
+            <pre><code>int time = 20;
+if (time < 18) {
+    System.out.println("Good day.");
+} else {
+    System.out.println("Good evening.");
+}</code></pre>
+        </div>
+
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Syntax Station</p>
+    </footer>
+</body>
+</html>

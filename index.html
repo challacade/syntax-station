@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Station - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Syntax Station</h1>
+        <p>A simple reference for programming beginners.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <label for="language-select">Choose a programming language:</label>
+            <select id="language-select" onchange="if (this.value) window.location.href = this.value;">
+                <option value="">-- Select --</option>
+                <option value="languages/java.html">Java</option>
+                <option value="languages/lua.html">Lua</option>
+            </select>
+        </section>
+
+        <section class="welcome-message">
+            <h2>Welcome!</h2>
+            <p>Select a language from the dropdown above to see fundamental code snippets and syntax examples.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Syntax Station</p>
+    </footer>
+</body>
+</html>
