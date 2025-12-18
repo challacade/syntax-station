@@ -8,23 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Syntax Station</h1>
+        <h1><a href="index.html">Syntax Station</a></h1>
         <p>A simple reference for programming beginners.</p>
     </header>
 
     <main>
         <section class="selector-section">
-            <label for="language-select">Choose a programming language:</label>
-            <select id="language-select" onchange="if (this.value) window.location.href = this.value;">
-                <option value="">-- Select --</option>
-                <option value="languages/java.html">Java</option>
-                <option value="languages/lua.html">Lua</option>
-            </select>
+            <div class="button-row">
+                <a href="languages/java.html" class="lang-button">Java</a>
+                <a href="languages/lua.html" class="lang-button">Lua</a>
+            </div>
         </section>
 
         <section class="welcome-message">
             <h2>Welcome!</h2>
-            <p>Select a language from the dropdown above to see fundamental code snippets and syntax examples.</p>
+            <p>Select a language from the buttons above to see fundamental code snippets and syntax examples.</p>
         </section>
     </main>
 

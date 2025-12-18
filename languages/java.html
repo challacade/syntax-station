@@ -8,19 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>Syntax Station</h1>
+        <h1><a href="../index.html">Syntax Station</a></h1>
         <p>Java Fundamentals</p>
     </header>
 
     <main>
         <section class="selector-section">
-            <label for="language-select">Switch language:</label>
-            <select id="language-select" onchange="if (this.value) window.location.href = this.value;">
-                <option value="">-- Select --</option>
-                <option value="../index.html">Home</option>
-                <option value="java.html" selected>Java</option>
-                <option value="lua.html">Lua</option>
-            </select>
+            <div class="button-row">
+                <a href="java.html" class="lang-button active">Java</a>
+                <a href="lua.html" class="lang-button">Lua</a>
+            </div>
         </section>
 
         <div class="snippet-container">
