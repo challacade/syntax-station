@@ -21,16 +21,16 @@
             </div>
         </section>
 
-        <div class="snippet-container">
-            <h2>Variables</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Variables</h2></summary>
             <pre><code class="language-lua">myNum = 100                  --Number
 myOtherNum = 20.18           --Number
 myString = "Hello World!"    --String
 myBool = true                --Boolean</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Comments</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Comments</h2></summary>
             <pre><code class="language-lua">-- Comment on a single line
 
 --[[
@@ -38,10 +38,10 @@ myBool = true                --Boolean</code></pre>
      Everything in here will be
      treated as a comment
 --]]</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Arithmetic</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Arithmetic</h2></summary>
             <pre><code class="language-lua">myNum = 0
 myNum = myNum + 1   -- No "++" operator in Lua
 
@@ -50,10 +50,10 @@ myNum = myNum + 1   -- No "++" operator in Lua
      * : Multiplication      / : Division
      % : Modulus Division    ^ : Exponent
 --]]</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Conditionals</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Conditionals</h2></summary>
             <pre><code class="language-lua">if myNum == 0 then
    myNum = myNum + 1
 end
@@ -71,10 +71,10 @@ elseif myNum < 1 then
 else
    result = "myNum is equal to 1"
 end</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Loops</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Loops</h2></summary>
             <pre><code class="language-lua">-- While Loop
 while myNum < 50 do
    myNum = myNum + 1
@@ -91,10 +91,10 @@ end
 for i=100,0,-5 do
    myNum = myNum + 1
 end</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Functions</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Functions</h2></summary>
             <pre><code class="language-lua">function isNegative(n)
    if n < 0 then
       return true
@@ -111,10 +111,10 @@ function pow(base, exp) return base^exp end
 -- Functions can be assigned to variables
 myVar = isNegative
 myVar(20)   -- Returns false</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Tables</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Tables</h2></summary>
             <pre><code class="language-lua">myTable = {}       -- Creates empty table
 myTable[1] = 'a'   -- Put character 'a' at index 1
 
@@ -135,7 +135,7 @@ for i, n in ipairs(otherTable) do
    -- n stores the value at current index
 end
 -- During loop, variable "result" increases by 2, then 3, then 5.</code></pre>
-        </div>
+        </details>
 
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
     </main>

@@ -21,8 +21,8 @@
             </div>
         </section>
 
-        <div class="snippet-container">
-            <h2>Variables</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Variables</h2></summary>
             <pre><code class="language-java">int foo = 5;                      // Integer
 float bar = 40.25;                // Float
 boolean myBool = true;            // Boolean
@@ -32,20 +32,20 @@ char grade;   // Declaration
 grade = 'B';  // Initialization
 
 /* Other data types: byte, double, long */</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Comments</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Comments</h2></summary>
             <pre><code class="language-java">// Comment on a single line
 /*
    Block comments
    Everything in here will be
    treated as a comment
 */</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Arithmetic</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Arithmetic</h2></summary>
             <pre><code class="language-java">int foo = 100;
 foo++;
 
@@ -62,10 +62,10 @@ foo = foo - bar;
 
 foo += 5;   // Addition assignment operator
 foo -= 8;   // Subtraction assignment operator</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Conditionals</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Conditionals</h2></summary>
             <pre><code class="language-java">if (age == 10) {
    message = "one decade old";
 }
@@ -88,10 +88,10 @@ else
    >  : Greater than               <  : Less than
    >= : Greater than or equal to   <= : Less than or equal to
 */</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Loops</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Loops</h2></summary>
             <pre><code class="language-java">int num = 0;
 
 // While Loop
@@ -105,10 +105,10 @@ int sum = 0;
 for (int i = 0; i < 50; i++) {
    sum += i;   // adds all values from 0 to 49
 }</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Arrays</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Arrays</h2></summary>
             <pre><code class="language-java">// Creates an empty "scores" array that can store 20 integers
 int[] scores = new int[20];
 
@@ -119,10 +119,10 @@ System.out.println( scores[0] );   // Prints 92
 // Insert values at instantiation
 // Size of array automatically matches number of items
 string[] friends = { "Chris", "Jill", "Alex" };</code></pre>
-        </div>
+        </details>
 
-        <div class="snippet-container">
-            <h2>Classes</h2>
+        <details class="snippet-container" open>
+            <summary><h2>Classes</h2></summary>
             <pre><code class="language-java">public class Person {
    public string name;
    public int age;
@@ -134,7 +134,7 @@ string[] friends = { "Chris", "Jill", "Alex" };</code></pre>
 Person man = new Person();
 man.name = "John";
 man.age = 30;</code></pre>
-        </div>
+        </details>
 
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
     </main>

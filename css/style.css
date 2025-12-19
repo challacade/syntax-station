@@ -166,19 +166,56 @@ header p {
 
 .snippet-container {
     background: var(--card-bg);
-    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.snippet-container summary {
+    padding: 12px 20px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.snippet-container summary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.snippet-container summary::-webkit-details-marker {
+    display: none;
+}
+
+.snippet-container summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    transition: transform 0.2s;
+}
+
+.snippet-container[open] summary::before {
+    transform: rotate(90deg);
 }
 
 .snippet-container h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
+    margin: 0;
+    font-size: 1.1rem;
     color: var(--accent-color);
-    border-left: 4px solid var(--accent-color);
-    padding-left: 15px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.snippet-container pre[class*="language-"] {
+    border: none !important;
+    border-top: 1px solid var(--border-color) !important;
+    border-radius: 0 !important;
 }
 
 pre[class*="language-"] {
