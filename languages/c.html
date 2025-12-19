@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntax Station - C++</title>
+    <title>Syntax Station - C</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -13,14 +13,14 @@
 <body>
     <header>
         <h1><a href="../index.html">Syntax Station</a></h1>
-        <p>A simple reference for <b>C++</b> programming fundamentals.</p>
+        <p>A simple reference for <b>C</b> programming fundamentals.</p>
     </header>
 
     <main>
         <section class="selector-section">
             <div class="button-row">
-                <a href="c.html" class="lang-button">C</a>
-                <a href="cplusplus.html" class="lang-button active">C++</a>
+                <a href="c.html" class="lang-button active">C</a>
+                <a href="cplusplus.html" class="lang-button">C++</a>
                 <a href="java.html" class="lang-button">Java</a>
                 <a href="csharp.html" class="lang-button">C#</a>
                 <a href="python.html" class="lang-button">Python</a>
@@ -31,18 +31,18 @@
 
         <details class="snippet-container" open>
             <summary><h2>Variables</h2></summary>
-            <pre><code class="language-cpp">int myInt = 101;                 // Integer
+            <pre><code class="language-c">int myInt = 101;                 // Integer
 float myFloat = 45.81;           // Float
-bool positive = true;            // Boolean
-string message = "Hello World!"; // String
+char letter = 'a';               // Character
+char message[] = "Hello World!"; // String (Array of characters)
 
-char letter;    // Declaration
-letter = 'a';   // Initialization</code></pre>
+// C99 adds boolean type with &lt;stdbool.h&gt;
+// bool positive = true;</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Comments</h2></summary>
-            <pre><code class="language-cpp">// Comment on a single line
+            <pre><code class="language-c">// Comment on a single line
 /*
    Block comments
    Everything in here will be
@@ -52,7 +52,7 @@ letter = 'a';   // Initialization</code></pre>
 
         <details class="snippet-container" open>
             <summary><h2>Arithmetic</h2></summary>
-            <pre><code class="language-cpp">int foo = 5;
+            <pre><code class="language-c">int foo = 5;
 foo++;
 
 int bar = 10;
@@ -72,7 +72,8 @@ foo -= 35;   // Subtraction assignment operator</code></pre>
 
         <details class="snippet-container" open>
             <summary><h2>Conditionals</h2></summary>
-            <pre><code class="language-cpp">year = 2018;
+            <pre><code class="language-c">int year = 2018;
+char* message;
 
 if (year > 2018) {
    message = "After 2018";
@@ -93,7 +94,7 @@ else {
 
         <details class="snippet-container" open>
             <summary><h2>Loops</h2></summary>
-            <pre><code class="language-cpp">int foo = 0;
+            <pre><code class="language-c">int foo = 0;
 
 // While Loop
 while (foo < 100) {
@@ -101,21 +102,22 @@ while (foo < 100) {
 }
 
 int sum = 0;
+int i;
 
 // For Loop
-for (int i = 0; i < 100; i++) {
+for (i = 0; i < 100; i++) {
    sum += i;   // adds all values from 0 to 99
 }</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Arrays</h2></summary>
-            <pre><code class="language-cpp">// Declares the array "points" that can store 9 integers
+            <pre><code class="language-c">// Declares the array "points" that can store 9 integers
 int points[9];
 
 points[0] = 716;
 points[1] = 482;
-cout << points[1];   // Prints 482
+printf("%d", points[1]);   // Prints 482
 
 // Initialize at declaration
 // Size of array automatically matches number of items
@@ -124,39 +126,30 @@ char grades[] = {'A', 'C', 'A', 'B'};</code></pre>
 
         <details class="snippet-container" open>
             <summary><h2>Functions</h2></summary>
-            <pre><code class="language-cpp">bool isNegative(int n) {
+            <pre><code class="language-c">// Returns 1 (true) if negative, 0 (false) otherwise
+int isNegative(int n) {
    return n < 0;
 }
 
-bool answer = isNegative(n)
+int answer = isNegative(-5);
 if (answer) {
-   cout << "Number is negative!";
+   printf("Number is negative!");
 }</code></pre>
         </details>
 
         <details class="snippet-container" open>
-            <summary><h2>Classes</h2></summary>
-            <pre><code class="language-cpp">class Person {
-   private:
-      // Only accessible from class instance
-      int ssn;
-   public:
-      // Publicly accessible
-      string name;
-      int age;
-      // Constructor
-      Person(string n, int a, int s) {
-         name = n;
-         age = a;
-         ssn = s;
-      }
-}
+            <summary><h2>Structs</h2></summary>
+            <pre><code class="language-c">struct Person {
+   char name[50];
+   int age;
+   int ssn;
+};
 
-// Creates a Person object called "man"
-Person man("Bob", 30, 123456789);
+// Initialize at declaration
+struct Person man = {"Bob", 30, 123456789};
 
-// Prints "Bob"
-cout << man.name;</code></pre>
+// Access members
+printf("%s is %d years old", man.name, man.age);</code></pre>
         </details>
 
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
@@ -167,6 +160,5 @@ cout << man.name;</code></pre>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
 </body>
 </html>
