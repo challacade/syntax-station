@@ -198,6 +198,9 @@ header p {
     margin-bottom: 15px;
     border: 1px solid var(--border-color);
     overflow: hidden;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .snippet-container summary {
