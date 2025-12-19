@@ -29,7 +29,7 @@ main {
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-bottom: 0;
 }
 
@@ -47,7 +47,7 @@ h1 {
     color: var(--accent-color);
     font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     letter-spacing: -1px;
 }
 
@@ -63,7 +63,7 @@ header p {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     border: 1px solid var(--border-color);
 }
 
@@ -100,33 +100,48 @@ header p {
 
 .welcome-message {
     text-align: left;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
+}
+
+.welcome-message p {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
 }
 
 .welcome-message h2 {
     color: var(--accent-color);
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .course-links {
     text-align: center;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px 0;
+    margin: 10px 0;
 }
 
 .course-links h3 {
     margin-top: 0;
+    margin-bottom: 5px;
     color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.course-links h3:not(:first-child) {
+    margin-top: 25px;
 }
 
 .course-links ul {
     list-style-type: none;
     padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .course-links li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 .course-links a {
