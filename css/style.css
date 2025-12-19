@@ -181,18 +181,18 @@ header p {
     padding-left: 15px;
 }
 
-pre {
-    background: var(--code-bg);
-    color: #f8f8f2;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-x: auto;
-    border: 1px solid #444;
-    font-size: 0.95rem;
+pre[class*="language-"] {
+    margin: 0 !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    background: var(--code-bg) !important;
+    border: 1px solid #444 !important;
+    padding: 20px !important;
 }
 
-code {
-    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+code[class*="language-"] {
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace !important;
+    text-shadow: none !important;
 }
 
 .back-link {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntax Station - Java</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
 
         <div class="snippet-container">
             <h2>Variables</h2>
-            <pre><code>int foo = 5;                      // Integer
+            <pre><code class="language-java">int foo = 5;                      // Integer
 float bar = 40.25;                // Float
 boolean myBool = true;            // Boolean
 String message = "Hello World!";  // String
@@ -35,7 +36,7 @@ grade = 'B';  // Initialization
 
         <div class="snippet-container">
             <h2>Comments</h2>
-            <pre><code>// Comment on a single line
+            <pre><code class="language-java">// Comment on a single line
 /*
    Block comments
    Everything in here will be
@@ -45,7 +46,7 @@ grade = 'B';  // Initialization
 
         <div class="snippet-container">
             <h2>Arithmetic</h2>
-            <pre><code>int foo = 100;
+            <pre><code class="language-java">int foo = 100;
 foo++;
 
 int bar = 10;
@@ -65,7 +66,7 @@ foo -= 8;   // Subtraction assignment operator</code></pre>
 
         <div class="snippet-container">
             <h2>Conditionals</h2>
-            <pre><code>if (age == 10) {
+            <pre><code class="language-java">if (age == 10) {
    message = "one decade old";
 }
 
@@ -91,7 +92,7 @@ else
 
         <div class="snippet-container">
             <h2>Loops</h2>
-            <pre><code>int num = 0;
+            <pre><code class="language-java">int num = 0;
 
 // While Loop
 while (num < 100) {
@@ -108,7 +109,7 @@ for (int i = 0; i < 50; i++) {
 
         <div class="snippet-container">
             <h2>Arrays</h2>
-            <pre><code>// Creates an empty "scores" array that can store 20 integers
+            <pre><code class="language-java">// Creates an empty "scores" array that can store 20 integers
 int[] scores = new int[20];
 
 scores[0] = 92;
@@ -122,7 +123,7 @@ string[] friends = { "Chris", "Jill", "Alex" };</code></pre>
 
         <div class="snippet-container">
             <h2>Classes</h2>
-            <pre><code>public class Person {
+            <pre><code class="language-java">public class Person {
    public string name;
    public int age;
    private int ssn;   // can't be accessed from outside instance
@@ -141,5 +142,7 @@ man.age = 30;</code></pre>
     <footer>
         <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 </body>
 </html>

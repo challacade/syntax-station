@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntax Station - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
             <p>The purpose of this site is to provide a quick and easy way to review the syntax for various programming languages. Select any of the available languages at the top to view a series of code snippets that go over the basics of that language's syntax. For example, functions in Python look like this:</p>
             
             <div class="snippet-container">
-                <pre><code>def maxValue(num1, num2):
+                <pre><code class="language-python">def maxValue(num1, num2):
    if num1 > num2:
       return num1
    else:
@@ -55,5 +56,7 @@ print maxValue(5, 10)  # prints 10</code></pre>
     <footer>
         <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>

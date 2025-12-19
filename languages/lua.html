@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntax Station - Lua</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
 
         <div class="snippet-container">
             <h2>Variables</h2>
-            <pre><code>myNum = 100                  --Number
+            <pre><code class="language-lua">myNum = 100                  --Number
 myOtherNum = 20.18           --Number
 myString = "Hello World!"    --String
 myBool = true                --Boolean</code></pre>
@@ -30,7 +31,7 @@ myBool = true                --Boolean</code></pre>
 
         <div class="snippet-container">
             <h2>Comments</h2>
-            <pre><code>-- Comment on a single line
+            <pre><code class="language-lua">-- Comment on a single line
 
 --[[
      Block comments
@@ -41,7 +42,7 @@ myBool = true                --Boolean</code></pre>
 
         <div class="snippet-container">
             <h2>Arithmetic</h2>
-            <pre><code>myNum = 0
+            <pre><code class="language-lua">myNum = 0
 myNum = myNum + 1   -- No "++" operator in Lua
 
 --[[
@@ -53,7 +54,7 @@ myNum = myNum + 1   -- No "++" operator in Lua
 
         <div class="snippet-container">
             <h2>Conditionals</h2>
-            <pre><code>if myNum == 0 then
+            <pre><code class="language-lua">if myNum == 0 then
    myNum = myNum + 1
 end
 
@@ -74,7 +75,7 @@ end</code></pre>
 
         <div class="snippet-container">
             <h2>Loops</h2>
-            <pre><code>-- While Loop
+            <pre><code class="language-lua">-- While Loop
 while myNum < 50 do
    myNum = myNum + 1
 end
@@ -94,7 +95,7 @@ end</code></pre>
 
         <div class="snippet-container">
             <h2>Functions</h2>
-            <pre><code>function isNegative(n)
+            <pre><code class="language-lua">function isNegative(n)
    if n < 0 then
       return true
    else
@@ -114,7 +115,7 @@ myVar(20)   -- Returns false</code></pre>
 
         <div class="snippet-container">
             <h2>Tables</h2>
-            <pre><code>myTable = {}       -- Creates empty table
+            <pre><code class="language-lua">myTable = {}       -- Creates empty table
 myTable[1] = 'a'   -- Put character 'a' at index 1
 
 -- NOTE: Tables in Lua start at index 1
@@ -142,5 +143,7 @@ end
     <footer>
         <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lua.min.js"></script>
 </body>
 </html>
