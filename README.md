@@ -1,6 +1,6 @@
 # Syntax Station
 
-A simple, open-source reference website for programming language syntax.
+A simple, open-source reference website for programming language syntax. Available at: [syntaxstation.com](https://syntaxstation.com)
 
 ## Overview
 
