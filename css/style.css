@@ -9,14 +9,22 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 20px 10px 20px;
     background-color: var(--bg-color);
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -146,9 +154,13 @@ code {
 
 footer {
     text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding: 10px 0;
     border-top: 1px solid var(--border-color);
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: var(--secondary-text);
+}
+
+footer p {
+    margin: 0;
 }
