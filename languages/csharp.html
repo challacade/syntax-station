@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntax Station - Java</title>
+    <title>Syntax Station - C#</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -13,15 +13,15 @@
 <body>
     <header>
         <h1><a href="../index.html">Syntax Station</a></h1>
-        <p>A simple reference for <b>Java</b> programming fundamentals.</p>
+        <p>A simple reference for <b>C#</b> programming fundamentals.</p>
     </header>
 
     <main>
         <section class="selector-section">
             <div class="button-row">
                 <a href="cplusplus.html" class="lang-button">C++</a>
-                <a href="java.html" class="lang-button active">Java</a>
-                <a href="csharp.html" class="lang-button">C#</a>
+                <a href="java.html" class="lang-button">Java</a>
+                <a href="csharp.html" class="lang-button active">C#</a>
                 <a href="python.html" class="lang-button">Python</a>
                 <a href="lua.html" class="lang-button">Lua</a>
                 <a href="perl.html" class="lang-button">Perl</a>
@@ -30,20 +30,21 @@
 
         <details class="snippet-container" open>
             <summary><h2>Variables</h2></summary>
-            <pre><code class="language-java">int foo = 5;                      // Integer
-float bar = 40.25;                // Float
-boolean myBool = true;            // Boolean
-String message = "Hello World!";  // String
+            <pre><code class="language-csharp">int age = 21;                     // Integer
+float price = 10.951f             // Float
+bool result = true;               // Boolean
+string message = "Hello World!";  // String
 
-char grade;   // Declaration
-grade = 'B';  // Initialization
+char firstInitial;   // Declaration
+firstInitial = 'K';  // Initialization
 
-/* Other data types: byte, double, long */</code></pre>
+/* Other data types: double, long, byte */</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Comments</h2></summary>
-            <pre><code class="language-java">// Comment on a single line
+            <pre><code class="language-csharp">// Comment on a single line
+
 /*
    Block comments
    Everything in here will be
@@ -53,27 +54,28 @@ grade = 'B';  // Initialization
 
         <details class="snippet-container" open>
             <summary><h2>Arithmetic</h2></summary>
-            <pre><code class="language-java">int foo = 100;
-foo++;
+            <pre><code class="language-csharp">int age = 21;
+age++;
 
-int bar = 10;
-foo = foo - bar;
+int yourAge = 34;
+age = age + yourAge;
 
 /*
-     + : Addition             - : Subtraction
-     * : Multiplication       / : Division
-     % : Modulus Division
+   + : Addition             - : Subtraction
+   * : Multiplication       / : Division
+   % : Modulus Division
 
-     ++ : Increase by 1       -- : Decrease by 1
+   ++ : Increase by 1       -- : Decrease by 1
 */
 
-foo += 5;   // Addition assignment operator
-foo -= 8;   // Subtraction assignment operator</code></pre>
+age += 5;   // Addition assignment operator
+age -= 8;   // Subtraction assignment operator</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Conditionals</h2></summary>
-            <pre><code class="language-java">if (age == 10) {
+            <pre><code class="language-csharp">if (age == 10)
+{
    message = "one decade old";
 }
 
@@ -99,40 +101,40 @@ else
 
         <details class="snippet-container" open>
             <summary><h2>Loops</h2></summary>
-            <pre><code class="language-java">int num = 0;
-
-// While Loop
-while (num < 100) {
+            <pre><code class="language-csharp">// While Loop
+while (num < 100)
+{
    num++;
 }
 
-int sum = 0;
-
 // For Loop
-for (int i = 0; i < 50; i++) {
-   sum += i;   // adds all values from 0 to 49
+for (int i = 0; i < 100; i++)
+{
+   sum += i;   // adds all values from 0 to 99
 }</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Arrays</h2></summary>
-            <pre><code class="language-java">// Creates an empty "scores" array that can store 20 integers
+            <pre><code class="language-csharp">// Creates an empty "scores" array that can store 20 integers
 int[] scores = new int[20];
 
 scores[0] = 92;
 scores[1] = 87;
-System.out.println( scores[0] );   // Prints 92
+
+Console.WriteLine( scores[0] );   // Prints 92
 
 // Insert values at instantiation
 // Size of array automatically matches number of items
-string[] friends = { "Chris", "Jill", "Alex" };</code></pre>
+string[] friends = new string[] { "Chris", "Jill", "Alex" };</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Classes</h2></summary>
-            <pre><code class="language-java">public class Person {
+            <pre><code class="language-csharp">class Person {
    public string name;
    public int age;
+
    private int ssn;   // can't be accessed from outside instance
 
    float wage;        // fields are private by default
@@ -143,6 +145,27 @@ man.name = "John";
 man.age = 30;</code></pre>
         </details>
 
+        <details class="snippet-container" open>
+            <summary><h2>Methods</h2></summary>
+            <pre><code class="language-csharp">class Person {
+   private int age;
+
+   public int getAge()
+   {
+      return age;
+   }
+
+   public int setAge(int newAge)
+   {
+      age = newAge;
+   }
+}
+
+Person man = new Person();
+man.setAge(25);
+Console.WriteLine( man.getAge() );</code></pre>
+        </details>
+
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
     </main>
 
@@ -150,6 +173,6 @@ man.age = 30;</code></pre>
         <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
 </body>
 </html>

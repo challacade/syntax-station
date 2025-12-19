@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syntax Station - Java</title>
+    <title>Syntax Station - C++</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -13,14 +13,14 @@
 <body>
     <header>
         <h1><a href="../index.html">Syntax Station</a></h1>
-        <p>A simple reference for <b>Java</b> programming fundamentals.</p>
+        <p>A simple reference for <b>C++</b> programming fundamentals.</p>
     </header>
 
     <main>
         <section class="selector-section">
             <div class="button-row">
-                <a href="cplusplus.html" class="lang-button">C++</a>
-                <a href="java.html" class="lang-button active">Java</a>
+                <a href="cplusplus.html" class="lang-button active">C++</a>
+                <a href="java.html" class="lang-button">Java</a>
                 <a href="csharp.html" class="lang-button">C#</a>
                 <a href="python.html" class="lang-button">Python</a>
                 <a href="lua.html" class="lang-button">Lua</a>
@@ -30,20 +30,18 @@
 
         <details class="snippet-container" open>
             <summary><h2>Variables</h2></summary>
-            <pre><code class="language-java">int foo = 5;                      // Integer
-float bar = 40.25;                // Float
-boolean myBool = true;            // Boolean
-String message = "Hello World!";  // String
+            <pre><code class="language-cpp">int myInt = 101;                 // Integer
+float myFloat = 45.81;           // Float
+bool positive = true;            // Boolean
+string message = "Hello World!"; // String
 
-char grade;   // Declaration
-grade = 'B';  // Initialization
-
-/* Other data types: byte, double, long */</code></pre>
+char letter;    // Declaration
+letter = 'a';   // Initialization</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Comments</h2></summary>
-            <pre><code class="language-java">// Comment on a single line
+            <pre><code class="language-cpp">// Comment on a single line
 /*
    Block comments
    Everything in here will be
@@ -53,11 +51,11 @@ grade = 'B';  // Initialization
 
         <details class="snippet-container" open>
             <summary><h2>Arithmetic</h2></summary>
-            <pre><code class="language-java">int foo = 100;
+            <pre><code class="language-cpp">int foo = 5;
 foo++;
 
 int bar = 10;
-foo = foo - bar;
+foo = foo + bar;
 
 /*
      + : Addition             - : Subtraction
@@ -67,27 +65,22 @@ foo = foo - bar;
      ++ : Increase by 1       -- : Decrease by 1
 */
 
-foo += 5;   // Addition assignment operator
-foo -= 8;   // Subtraction assignment operator</code></pre>
+foo += 12;   // Addition assignment operator
+foo -= 35;   // Subtraction assignment operator</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Conditionals</h2></summary>
-            <pre><code class="language-java">if (age == 10) {
-   message = "one decade old";
-}
+            <pre><code class="language-cpp">year = 2018;
 
-if (age > 21)
-{
-   message = "over 21";
+if (year > 2018) {
+   message = "After 2018";
 }
-else if (age < 21)
-{
-   message = "under 21";
+else if (year < 2018) {
+   message = "Before 2018";
 }
-else
-{
-   message = "exactly 21";
+else {
+   message = "The year is 2018!";
 }
 
 /*
@@ -99,48 +92,70 @@ else
 
         <details class="snippet-container" open>
             <summary><h2>Loops</h2></summary>
-            <pre><code class="language-java">int num = 0;
+            <pre><code class="language-cpp">int foo = 0;
 
 // While Loop
-while (num < 100) {
-   num++;
+while (foo < 100) {
+   foo++;
 }
 
 int sum = 0;
 
 // For Loop
-for (int i = 0; i < 50; i++) {
-   sum += i;   // adds all values from 0 to 49
+for (int i = 0; i < 100; i++) {
+   sum += i;   // adds all values from 0 to 99
 }</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Arrays</h2></summary>
-            <pre><code class="language-java">// Creates an empty "scores" array that can store 20 integers
-int[] scores = new int[20];
+            <pre><code class="language-cpp">// Declares the array "points" that can store 9 integers
+int points[9];
 
-scores[0] = 92;
-scores[1] = 87;
-System.out.println( scores[0] );   // Prints 92
+points[0] = 716;
+points[1] = 482;
+cout << points[1];   // Prints 482
 
-// Insert values at instantiation
+// Initialize at declaration
 // Size of array automatically matches number of items
-string[] friends = { "Chris", "Jill", "Alex" };</code></pre>
+char grades[] = {'A', 'C', 'A', 'B'};</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Functions</h2></summary>
+            <pre><code class="language-cpp">bool isNegative(int n) {
+   return n < 0;
+}
+
+bool answer = isNegative(n)
+if (answer) {
+   cout << "Number is negative!";
+}</code></pre>
         </details>
 
         <details class="snippet-container" open>
             <summary><h2>Classes</h2></summary>
-            <pre><code class="language-java">public class Person {
-   public string name;
-   public int age;
-   private int ssn;   // can't be accessed from outside instance
-
-   float wage;        // fields are private by default
+            <pre><code class="language-cpp">class Person {
+   private:
+      // Only accessible from class instance
+      int ssn;
+   public:
+      // Publicly accessible
+      string name;
+      int age;
+      // Constructor
+      Person(string n, int a, int s) {
+         name = n;
+         age = a;
+         ssn = s;
+      }
 }
 
-Person man = new Person();
-man.name = "John";
-man.age = 30;</code></pre>
+// Creates a Person object called "man"
+Person man("Bob", 30, 123456789);
+
+// Prints "Bob"
+cout << man.name;</code></pre>
         </details>
 
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
@@ -150,6 +165,6 @@ man.age = 30;</code></pre>
         <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
 </body>
 </html>

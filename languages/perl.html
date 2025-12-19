@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Station - Perl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">Syntax Station</a></h1>
+        <p>A simple reference for <b>Perl</b> programming fundamentals.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <div class="button-row">
+                <a href="cplusplus.html" class="lang-button">C++</a>
+                <a href="java.html" class="lang-button">Java</a>
+                <a href="csharp.html" class="lang-button">C#</a>
+                <a href="python.html" class="lang-button">Python</a>
+                <a href="lua.html" class="lang-button">Lua</a>
+                <a href="perl.html" class="lang-button active">Perl</a>
+            </div>
+        </section>
+
+        <details class="snippet-container" open>
+            <summary><h2>Scalars</h2></summary>
+            <pre><code class="language-perl"># Scalars are simple variables that hold one value
+$myNum = 100;                  # Number
+$decimal = -5.742;             # Floating point number
+$sampleText = "Hello World!";  # String
+
+# Scalars can be references, which hold the location of data
+$myRef = \$sampleText;  # myRef holds the location of sampleText
+
+# Dereference (get value at reference's location)
+print ${$myRef};  # The first $ may change based on data type</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Arrays</h2></summary>
+            <pre><code class="language-perl">@scores = (95, 86, 92);
+@subjects = ("Math", "History", "Writing");
+
+$myNum = $scores[0];
+$faveSubject = $subjects[2];</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Hashes</h2></summary>
+            <pre><code class="language-perl"># Hashes are key/value pairs
+
+%ages;  # declare an empty hash
+$ages{'Bob'} = 35;  # 35 is the value for the key 'Bob'
+$ages{'Jane'} = 20;
+
+$ageOfJane = $ages{'Jane'};  # Gets value 20 from the hash</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Comments</h2></summary>
+            <pre><code class="language-perl"># This line is a comment
+# Use the pound sign to start your comments</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Arithmetic</h2></summary>
+            <pre><code class="language-perl">$myNum = 0;
+$myNum = $myNum + 1;
+
+#   + : Addition            - : Subtraction
+#   * : Multiplication      / : Division
+#   % : Modulus Division    **: Exponent</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Conditionals</h2></summary>
+            <pre><code class="language-perl">if ($myNum == 0) {
+   $myNum = $myNum + 1;
+}
+
+#   == : Equal to                  != : Not Equal to
+#   >  : Greater than              <  : Less than
+#   >= : Greater than or equal to  <= : Less than or equal to
+
+if ($myNum > 1) {
+   $result = "myNum is greater than 1";
+} elsif ($myNum < 1) {
+   $result = "myNum is less than 1";
+} else {
+   $result = "myNum is equal to 1";
+}</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Loops</h2></summary>
+            <pre><code class="language-perl"># While Loop
+while ($myNum < 50) {
+   $myNum = $myNum + 1;
+}
+
+# For Loop
+# initial value; condition; increment
+for ( $i = 0; $i < 10; $i++ ) {
+   $myNum = $myNum + 1;
+}</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Subroutines</h2></summary>
+            <pre><code class="language-perl"># Subroutines are very similar to functions from other languages
+
+sub addValues {
+   my ($val1, $val2) = @_;  # @_ is the array of arguments
+   return $val1 + $val2;
+}
+
+$sum = addValues(15, 42);</code></pre>
+        </details>
+
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-perl.min.js"></script>
+</body>
+</html>

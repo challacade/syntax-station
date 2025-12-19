@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Station - Python</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">Syntax Station</a></h1>
+        <p>A simple reference for <b>Python</b> programming fundamentals.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <div class="button-row">
+                <a href="cplusplus.html" class="lang-button">C++</a>
+                <a href="java.html" class="lang-button">Java</a>
+                <a href="csharp.html" class="lang-button">C#</a>
+                <a href="python.html" class="lang-button active">Python</a>
+                <a href="lua.html" class="lang-button">Lua</a>
+                <a href="perl.html" class="lang-button">Perl</a>
+            </div>
+        </section>
+
+        <details class="snippet-container" open>
+            <summary><h2>Variables</h2></summary>
+            <pre><code class="language-python">year = 2018               # integer
+float = 454.09            # floating point
+message = "Hello World!"  # string</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Comments</h2></summary>
+            <pre><code class="language-python"># Comment on a single line
+
+'''
+     Block comments
+     Everything in here will be
+     treated as a comment
+'''</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Arithmetic</h2></summary>
+            <pre><code class="language-python">year = 2018
+age = 10
+result = year + age
+
+'''
+     + : Addition             - : Subtraction
+     * : Multiplication       / : Division
+     % : Modulus Division     **: Exponent
+'''
+
+result += 50   # Addition assignment operator
+result -= 18   # Subtraction assignment operator</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Conditionals</h2></summary>
+            <pre><code class="language-python">year = 2018
+
+if year < 2018:
+    print "Before 2018"
+elif year > 2018:
+    print "After 2018"
+else:
+    print "The year is 2018!"
+
+'''
+    == : Equal to                   != : Not Equal to
+    >  : Greater than               <  : Less than
+    >= : Greater than or equal to   <= : Less than or equal to
+'''</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Loops</h2></summary>
+            <pre><code class="language-python">num = 0
+
+# While Loop
+while (num < 10):
+    num += 1
+
+# For Loop
+# iterates from 0 (inclusive) to 100 (exclusive)
+for i in range(0, 100):
+    num += 1
+
+# See List section to easily iterate through list elements</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Lists</h2></summary>
+            <pre><code class="language-python">grades = [97, 84, 89, 93]
+print grades[0]    # prints 97
+
+grades[1] = 90     # changes grade 84 to 90
+
+grades.append(95)  # puts 95 at the end of the list (index 4)
+grades.remove(90)  # remoeve cases of 90 from the list
+grades.insert(0, 99)  # insert value 99 at the index 0
+
+# print out every grade
+for grade in grades:  # iterates through every item in list
+    print grade       # "grade" is the current element
+
+# get a section of the list
+foo = grades[1:3]   # [first:last]
+                    # returns sublist from index 1 (inclusive)
+                    # to index 3 (exclusive) of grades list
+bar = grades[2:]    # returns sublist from index 2 (inclusive)
+                    # to end of grades list</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Functions</h2></summary>
+            <pre><code class="language-python">def maxValue(num1, num2):
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+
+print maxValue(5, 10)  # prints 10</code></pre>
+        </details>
+
+        <details class="snippet-container" open>
+            <summary><h2>Classes</h2></summary>
+            <pre><code class="language-python">class Person:
+    name = "Default Name"
+    age = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def sayHello(self):
+        print "Hello!"
+
+friend = Person("Austin", 21)
+print friend.name  # prints "Austin"
+friend.sayHello()  # prints "Hello!"</code></pre>
+        </details>
+
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Challacade LLC. This project is licensed under the MIT license.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
