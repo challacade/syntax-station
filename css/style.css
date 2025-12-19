@@ -289,3 +289,9 @@ footer {
 footer p {
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .snippet-container {
+        width: 100%;
+    }
+}
