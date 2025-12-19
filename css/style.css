@@ -99,12 +99,54 @@ header p {
 }
 
 .welcome-message {
-    text-align: center;
-    padding: 40px 0;
+    text-align: left;
+    padding: 20px 0;
 }
 
 .welcome-message h2 {
     color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.course-links {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.course-links h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.course-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-links li {
+    margin-bottom: 10px;
+}
+
+.course-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.course-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.welcome-message a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.welcome-message a:hover {
+    text-decoration: underline;
 }
 
 .snippet-container {

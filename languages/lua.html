@@ -21,33 +21,119 @@
         </section>
 
         <div class="snippet-container">
-            <h2>Hello World</h2>
-            <pre><code>print("Hello, World!")</code></pre>
-        </div>
-
-        <div class="snippet-container">
             <h2>Variables</h2>
-            <pre><code>local myNum = 5              -- Number
-local myString = "Hello"     -- String
-local myBool = true          -- Boolean
-local myTable = {1, 2, 3}    -- Table</code></pre>
+            <pre><code>myNum = 100                  --Number
+myOtherNum = 20.18           --Number
+myString = "Hello World!"    --String
+myBool = true                --Boolean</code></pre>
         </div>
 
         <div class="snippet-container">
-            <h2>If-Else</h2>
-            <pre><code>local time = 20
-if time < 18 then
-    print("Good day.")
+            <h2>Comments</h2>
+            <pre><code>-- Comment on a single line
+
+--[[
+     Block comments
+     Everything in here will be
+     treated as a comment
+--]]</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Arithmetic</h2>
+            <pre><code>myNum = 0
+myNum = myNum + 1   -- No "++" operator in Lua
+
+--[[
+     + : Addition            - : Subtraction
+     * : Multiplication      / : Division
+     % : Modulus Division    ^ : Exponent
+--]]</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Conditionals</h2>
+            <pre><code>if myNum == 0 then
+   myNum = myNum + 1
+end
+
+--[[
+     == : Equal to                  ~= : Not Equal to
+     >  : Greater than              <  : Less than
+     >= : Greater than or equal to  <= : Less than or equal to
+--]]
+
+if myNum > 1 then
+   result = "myNum is greater than 1"
+elseif myNum < 1 then
+   result = "myNum is less than 1"
 else
-    print("Good evening.")
+   result = "myNum is equal to 1"
 end</code></pre>
         </div>
 
         <div class="snippet-container">
             <h2>Loops</h2>
-            <pre><code>for i = 1, 5 do
-    print(i)
+            <pre><code>-- While Loop
+while myNum < 50 do
+   myNum = myNum + 1
+end
+
+-- For Loop
+-- Loops 100 times, iterator "i" increases by 1 each loop
+for i=1,100 do
+   myNum = myNum + 1
+end
+
+-- Optional third parameter is the increment value
+-- This loop decreases by 5 each time from 100 to 0
+for i=100,0,-5 do
+   myNum = myNum + 1
 end</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Functions</h2>
+            <pre><code>function isNegative(n)
+   if n < 0 then
+      return true
+   else
+      return false
+   end
+end
+
+isNegative(-15)   -- Returns true
+
+-- Multiple parameters
+function pow(base, exp) return base^exp end
+
+-- Functions can be assigned to variables
+myVar = isNegative
+myVar(20)   -- Returns false</code></pre>
+        </div>
+
+        <div class="snippet-container">
+            <h2>Tables</h2>
+            <pre><code>myTable = {}       -- Creates empty table
+myTable[1] = 'a'   -- Put character 'a' at index 1
+
+-- NOTE: Tables in Lua start at index 1
+
+myTable["lua"] = 20    -- myTable contains 20 at index "lua"
+myTable[1] = nil       -- Removes value stored at index 1
+
+myTable.name = "Alex"  -- myTable["name"] contains string "Alex"
+
+otherTable = {2, 3, 5} -- Creates table with 2 stored at index 1,
+                       -- 3 stored at index 2, and 5 at index 3
+
+-- Iterate through all values in a table
+for i, n in ipairs(otherTable) do
+   result = result + n
+   -- i stores the current index
+   -- n stores the value at current index
+end
+-- During loop, variable "result" increases by 2, then 3, then 5.</code></pre>
         </div>
 
         <a href="../index.html" class="back-link">&larr; Back to Home</a>
